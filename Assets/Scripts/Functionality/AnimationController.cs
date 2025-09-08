@@ -22,14 +22,14 @@ public class AnimationController : MonoBehaviour
     {
         int row = 0;
         int col = 0;
-        m_SymbolsToEmit = SocketManager.resultData.symbolsToEmit;
+        m_SymbolsToEmit = SocketManager.fullResultData.features.winningSymbols;
         m_CoverPanel.SetActive(true);
         if(m_SymbolsToEmit.Count > 0)
         {
-            for (int i = 0; i < SocketManager.resultData.symbolsToEmit.Count; i++)
+            for (int i = 0; i < SocketManager.fullResultData.features.winningSymbols.Count; i++)
             {
-                row = int.Parse(SocketManager.resultData.symbolsToEmit[i].Split(',')[1]);
-                col = int.Parse(SocketManager.resultData.symbolsToEmit[i].Split(',')[0]);
+                row = int.Parse(SocketManager.fullResultData.features.winningSymbols[i].Split(',')[0]);
+                col = int.Parse(SocketManager.fullResultData.features.winningSymbols[i].Split(',')[1]);
                 //PopulateAnimationSprites(m_ShowTempImages[col]
                 //    .slotImages[row].transform.GetChild(2).GetComponent<ImageAnimation>(),
                 //    GetValueFromMatrix(row, col)
@@ -37,7 +37,7 @@ public class AnimationController : MonoBehaviour
                 GameObject obj = m_ShowTempImages[col].slotImages[row].gameObject;
                 obj.SetActive(true);
                 obj.transform.GetChild(1).GetComponent<ImageAnimation>().StartAnimation();
-                obj.transform.GetChild(2).GetComponent<Image>().sprite = m_SlotManager.myImages[int.Parse(SocketManager.resultData.ResultReel[row][col])];
+                obj.transform.GetChild(2).GetComponent<Image>().sprite = m_SlotManager.myImages[int.Parse(SocketManager.fullResultData.matrix[row][col])];
 
             }
         }

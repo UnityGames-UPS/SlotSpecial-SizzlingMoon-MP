@@ -1366,8 +1366,9 @@ public class SlotBehaviour : MonoBehaviour
         Vector3 original_position = slotTransform.position;
         original_position.y += 0.2f;
         slotTransform.position = original_position;
-        Tweener tween = slotTransform.DOMoveY(original_position.y - 0.2f, 0.2f).SetEase(Ease.OutBounce);
+        Tweener tween = slotTransform.DOLocalMoveY(original_position.y - 0.2f, 0.2f).SetEase(Ease.OutBounce);
         tween.Play();
+        slotTransform.localPosition = new Vector2(0, 0);
     }
 
     private void StartTweeningShow()

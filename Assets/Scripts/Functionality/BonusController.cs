@@ -303,7 +303,7 @@ public class BonusController : MonoBehaviour
             obj.transform.GetChild(1).gameObject.SetActive(false);
             obj.transform.GetChild(2).gameObject.SetActive(false);
         }
-    audioController.PlaySpinAudio(true);
+   //audioController.PlaySpinAudio(true);
         yield return new WaitForSeconds(1f);
 
         // Assign mystery symbols
@@ -499,7 +499,7 @@ public class BonusController : MonoBehaviour
             yield return new WaitUntil(() => m_SocketManager.isResultdone);
             yield return StartCoroutine(StartMoonMysteryAndMystery());
         }
-        audioController.PlaySpinAudio(false);
+      //  audioController.PlaySpinAudio(false);
 
         yield return new WaitForSeconds(1f);
 

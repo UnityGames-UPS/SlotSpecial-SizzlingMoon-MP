@@ -1242,7 +1242,7 @@ public class SlotBehaviour : MonoBehaviour
         //}
         if (SocketManager.fullResultData.payload.currentWinning > 0)
         {
-           // audioController.PlayWin(Sound.MegaWin);
+            // audioController.PlayWin(Sound.MegaWin);
             audioController.PlayGold_Enc();
             uiManager.PopulateWin(1, SocketManager.fullResultData.payload.currentWinning);
             m_AnimationController.StartAnimation();
@@ -1395,6 +1395,10 @@ public class SlotBehaviour : MonoBehaviour
         {
             bonusTweens[index] = slotTransform.DOLocalMoveY(-tweenpos + 100 + (SpaceFactor > 0 ? SpaceFactor / 4 : 0), 0.5f).SetEase(Ease.OutQuad);
         }
+        if (index == 3) // last reel
+        {
+            alltweens[3].OnComplete(() => audioController.PlaySpinAudio(false));
+        }
         if (!isStop)
         {
             yield return new WaitForSeconds(0.2f);
@@ -1407,6 +1411,7 @@ public class SlotBehaviour : MonoBehaviour
 
     internal void InitBonusTween()
     {
+        audioController.PlaySpinAudio(true);
         for (int i = 0; i < numberOfSlots; i++)
         {
             InitializeTweening(Slot_Transform[i], true);
@@ -1420,6 +1425,7 @@ public class SlotBehaviour : MonoBehaviour
         {
             yield return StopTweening(6, Slot_Transform[i], i, IsStoppedSpin, true);
         }
+      //  audioController.PlaySpinAudio(true);
 
         KillBonusTweens();
     }

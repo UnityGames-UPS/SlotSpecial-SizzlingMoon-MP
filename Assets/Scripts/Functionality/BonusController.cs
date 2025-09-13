@@ -185,15 +185,15 @@ public class BonusController : MonoBehaviour
     }
 
     //HACK: May be used in future with backend
-    internal void PopulateFreeSpinResult()
+    internal void PopulateFreeSpinResult() //###########commented  by pk 13 sept
     {
-        for (int i = 0; i < m_SlotBehaviour.Tempimages.Count; i++)
-        {
-            for (int j = 0; j < m_SlotBehaviour.Tempimages[i].slotImages.Count; j++)
-            {
-                m_SlotBehaviour.m_ShowTempImages[i].slotImages[j].transform.GetChild(2).GetComponent<Image>().sprite = m_SlotBehaviour.myImages[int.Parse(m_SocketManager.fullResultData.bonusMatrix[i][j])];
-            }
-        }
+        // for (int i = 0; i < m_SlotBehaviour.Tempimages.Count; i++)
+        // {
+        //     for (int j = 0; j < m_SlotBehaviour.Tempimages[i].slotImages.Count; j++)
+        //     {
+        //         m_SlotBehaviour.m_ShowTempImages[i].slotImages[j].transform.GetChild(2).GetComponent<Image>().sprite = m_SlotBehaviour.myImages[int.Parse(m_SocketManager.fullResultData.bonusMatrix[i][j])];
+        //     }
+        // }
     }
 
     private bool CheckFreeze(Transform m_Transform)
@@ -478,6 +478,7 @@ public class BonusController : MonoBehaviour
         FreeSpinInitAnimation(true);
 
         yield return new WaitForSeconds(2f);
+        m_SlotBehaviour.InitializeBonusSlot();
 
         m_UIManager.FreeSpinProcess((int)m_SocketManager.fullResultData.features.freeSpin.freeSpinCount);
 

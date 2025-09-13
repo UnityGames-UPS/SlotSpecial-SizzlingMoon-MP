@@ -782,7 +782,7 @@ public class SlotBehaviour : MonoBehaviour
         }
 
         //HACK: Instruction Updated After Spin Ends If Wins then it shouldn't be updated other wise it will prompt 0th index
-        TotalWin_text.text = m_Instructions[0];
+        // TotalWin_text.text = m_Instructions[0];
 
         //HACK: Check For The Result And Activate Animations Accordingly
         //CheckPayoutLineBackend(SocketManager.resultData.linesToEmit, SocketManager.resultData.FinalsymbolsToEmit, SocketManager.resultData.jackpot);
@@ -1065,7 +1065,7 @@ public class SlotBehaviour : MonoBehaviour
                 }
 
                 m_ShowTempImages[j].slotImages[i].gameObject.SetActive(true);
-                if (IsFreeSpin || SocketManager.fullResultData.features.freeSpin.useFreeSpin)
+                if (IsFreeSpin) //|| SocketManager.fullResultData.features.freeSpin.useFreeSpin. ### commented by pransu
                 {
                     if (SocketManager.fullResultData.bonusMatrix.Count > 0)
                     {
@@ -1134,6 +1134,37 @@ public class SlotBehaviour : MonoBehaviour
             }
         }
         m_CheckEndTraversal = true;
+    }
+
+    internal void InitializeBonusSlot()
+    {
+        for (int i = 0; i < m_ShowTempImages.Count; i++)
+        {
+            m_CheckEndTraversal = false;
+            for (int j = 0; j < m_ShowTempImages[i].slotImages.Count; j++)
+            {
+                if (SocketManager.fullResultData.bonusMatrix.Count > 0)
+                {
+                    // int symbolvalue =  int.Parse(SocketManager.fullResultData.bonusMatrix[i][j]);    //updated by PK
+                    m_ShowTempImages[j].slotImages[i].transform.GetChild(2).GetComponent<Image>().sprite = myImages[int.Parse(SocketManager.fullResultData.bonusMatrix[i][j])];
+
+                    Debug.Log(string.Concat("<color=yellow><b>", $"Bonus Result Reel Is Not Empty: {SocketManager.fullResultData.bonusMatrix.Count}", "</b></color>"));
+                }
+                else
+                {
+                    m_ShowTempImages[j].slotImages[i].transform.GetChild(2).GetComponent<Image>().sprite = myImages[int.Parse(SocketManager.fullResultData.matrix[i][j])];
+                }
+                if (!_bonusManager.GetFreezed(m_ShowTempImages[j].slotImages[i].transform, false))
+                    InitializeShowTweening(m_ShowTempImages[j].slotImages[i].transform.GetChild(2));
+
+                ImageAnimation anim = m_ShowTempImages[j].slotImages[i].transform.GetChild(2).GetComponent<ImageAnimation>();
+                m_ShowTempImages[j].slotImages[i].transform.GetChild(1).GetComponent<ImageAnimation>().StartAnimation();
+                if (anim.textureArray.Count > 0)
+                    anim.StartAnimation();
+            }
+        }
+
+
     }
 
     private void StopLevelOrderTraversal()
@@ -1218,7 +1249,7 @@ public class SlotBehaviour : MonoBehaviour
 
     internal void BalanceUpdate()
     {
-        if (TotalWin_text) TotalWin_text.text = (SocketManager.playerdata.currentWining).ToString("F3");
+        if (TotalWin_text) TotalWin_text.text = (SocketManager.fullResultData.payload.currentWinning).ToString("F3");
         if (Balance_text) Balance_text.text = SocketManager.playerdata.balance.ToString("F3");
     }
 
@@ -1424,7 +1455,7 @@ public class SlotBehaviour : MonoBehaviour
             yield return StopTweening(6, Slot_Transform[i], i, IsStoppedSpin, true);
         }
         audioController.PlaySpinAudio(false);
-      //  audioController.PlaySpinAudio(true);
+        //  audioController.PlaySpinAudio(true);
 
         KillBonusTweens();
     }

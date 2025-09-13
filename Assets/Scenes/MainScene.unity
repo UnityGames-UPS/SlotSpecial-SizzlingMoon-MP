@@ -838,6 +838,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &18772204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1578,6 +1579,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &31627565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2127,6 +2129,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &55033325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2464,6 +2467,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &58778162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2845,6 +2849,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &65419068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3373,6 +3378,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &75505262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,6 +3518,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &77412935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3651,6 +3658,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &79503986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3911,6 +3919,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &85721256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4978,6 +4987,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &110499580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5532,6 +5542,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &124138042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7055,6 +7066,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &152985873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7884,6 +7896,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &187820400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9372,6 +9385,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &247960203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10101,6 +10115,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &268779158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10411,6 +10426,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &275385250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11278,6 +11294,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &316245728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11982,6 +11999,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &331492904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12172,6 +12190,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &333456004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12743,6 +12762,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &347689578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13464,6 +13484,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &365202441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14503,6 +14524,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &390083304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14957,6 +14979,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &397388470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15294,6 +15317,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &428976555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15497,6 +15521,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &429265181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15889,6 +15914,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &436054869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17069,6 +17095,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &465671609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17184,6 +17211,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &466302301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17501,6 +17529,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &484009775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17928,7 +17957,7 @@ MonoBehaviour:
   uiManager: {fileID: 377874625}
   bonusdata: []
   JSManager: {fileID: 350417339}
-  testToken: 62bcecadac11436f95fb6c93c8d6e404
+  testToken: aba8d6d40fbc40589afdd8aeabab60d4
   RaycastBlocker: {fileID: 143806757}
 --- !u!1 &501585566
 GameObject:
@@ -18256,6 +18285,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &509950804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18832,6 +18862,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &522895666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19281,7 +19312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3025583be3ed64f25863836bd9d8bce0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b08150e1909cc40b4a7bf2fad8d631c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -19363,9 +19394,10 @@ MonoBehaviour:
   useSharedMaterial: 1
   doLoopAnimation: 1
   currentAnimationState: 0
-  AnimationSpeed: 40
+  AnimationSpeed: 35
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 1
 --- !u!1 &543509226
 GameObject:
   m_ObjectHideFlags: 0
@@ -21055,6 +21087,7 @@ MonoBehaviour:
   AnimationSpeed: 20
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!1 &607102127
 GameObject:
   m_ObjectHideFlags: 0
@@ -21179,6 +21212,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &610745165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21628,6 +21662,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &623324605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23608,6 +23643,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &653941639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24157,6 +24193,7 @@ MonoBehaviour:
   AnimationSpeed: 30
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &662565360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24509,6 +24546,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &665493420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24817,6 +24855,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &671927486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25387,9 +25426,10 @@ MonoBehaviour:
   useSharedMaterial: 1
   doLoopAnimation: 1
   currentAnimationState: 0
-  AnimationSpeed: 40
+  AnimationSpeed: 35
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 1
 --- !u!1 &682606549
 GameObject:
   m_ObjectHideFlags: 0
@@ -25948,6 +25988,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &689669235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26489,6 +26530,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &698880343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26604,6 +26646,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &699054346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26719,6 +26762,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &699481806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30791,6 +30835,7 @@ MonoBehaviour:
   AnimationSpeed: 60
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &827301362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30887,6 +30932,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &827484870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31041,6 +31087,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &840891808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32260,6 +32307,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &858907404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34023,9 +34071,10 @@ MonoBehaviour:
   useSharedMaterial: 1
   doLoopAnimation: 1
   currentAnimationState: 0
-  AnimationSpeed: 40
+  AnimationSpeed: 35
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 1
 --- !u!1 &911676900
 GameObject:
   m_ObjectHideFlags: 0
@@ -36197,6 +36246,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &994697541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36909,6 +36959,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1017118725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37082,6 +37133,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1019380643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37178,6 +37230,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1023442809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38275,6 +38328,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1056254860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38489,6 +38543,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1069511321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38604,6 +38659,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1071154740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38807,6 +38863,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1071530273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39009,6 +39066,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1088328793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39686,6 +39744,7 @@ MonoBehaviour:
   AnimationSpeed: 30
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1122377259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40373,6 +40432,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1135815909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40563,6 +40623,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1138628354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40928,6 +40989,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1152571656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42546,6 +42608,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1193880378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43668,6 +43731,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1212503858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44053,6 +44117,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1223635444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44224,6 +44289,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1230023735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46596,6 +46662,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1299692026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47462,6 +47529,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1326353527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48674,6 +48742,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1354497411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49042,6 +49111,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1363286702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49157,6 +49227,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1363389465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49424,6 +49495,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1368165380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50453,6 +50525,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1406695446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50998,6 +51071,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1418604658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51336,6 +51410,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1423190705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51539,6 +51614,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1424010106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51916,6 +51992,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1441115641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52031,6 +52108,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1441553295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52146,6 +52224,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1442013797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53729,6 +53808,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1483844533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54460,6 +54540,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1500537982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54829,6 +54910,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1518990922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55333,6 +55415,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1529829406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56307,6 +56390,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1564280639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56951,6 +57035,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1593928957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57330,6 +57415,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1627653931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58948,6 +59034,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1683430096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59143,6 +59230,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1692572192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59712,6 +59800,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1699136984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60008,6 +60097,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1713806442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60318,6 +60408,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1727042413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60896,6 +60987,7 @@ MonoBehaviour:
   AnimationSpeed: 20
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!1 &1742072182
 GameObject:
   m_ObjectHideFlags: 0
@@ -62008,6 +62100,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1797520236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62261,6 +62354,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1807746058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63056,6 +63150,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1830438758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63798,6 +63893,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1855707151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63913,6 +64009,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1856577222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64028,6 +64125,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1875201933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65097,6 +65195,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &1900440132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65332,6 +65431,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1904616882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68393,6 +68493,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &1986494362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71472,6 +71573,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &2052321441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72027,6 +72129,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &2068905511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72737,6 +72840,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &2086837368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73101,6 +73205,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &2099719411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73958,6 +74063,7 @@ MonoBehaviour:
   AnimationSpeed: 20
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!1 &2138465104
 GameObject:
   m_ObjectHideFlags: 0
@@ -75721,6 +75827,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668711430408591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75784,6 +75891,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668711469042573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75847,6 +75955,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668711614702080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75910,6 +76019,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668711676996039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75973,6 +76083,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668711770088185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76036,6 +76147,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712149238375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76099,6 +76211,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712541301774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76162,6 +76275,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712551501756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76225,6 +76339,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712578575380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76288,6 +76403,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712583735586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76351,6 +76467,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712713043078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76414,6 +76531,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712786874329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76477,6 +76595,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668712953611552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76540,6 +76659,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668713087653311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76603,6 +76723,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!114 &3954668713091372669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76666,6 +76787,7 @@ MonoBehaviour:
   AnimationSpeed: 28
   delayBetweenLoop: 0
   playOnAwake: 1
+  startOnEnable: 0
 --- !u!1 &3963406463723139600
 GameObject:
   m_ObjectHideFlags: 0
@@ -77349,6 +77471,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964074055992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77369,6 +77492,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964389818617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77389,6 +77513,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964396512075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77409,6 +77534,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964622529361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77429,6 +77555,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964623365735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77449,6 +77576,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964646162588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77469,6 +77597,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964756997059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77489,6 +77618,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073964791933541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77509,6 +77639,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073965283601698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77529,6 +77660,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073965471753416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77549,6 +77681,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073965500098250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77569,6 +77702,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073965516912085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77589,6 +77723,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073965801195138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77609,6 +77744,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073965818596677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77629,6 +77765,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!114 &6397073965974113724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77649,6 +77786,7 @@ MonoBehaviour:
   AnimationSpeed: 12
   delayBetweenLoop: 0
   playOnAwake: 0
+  startOnEnable: 0
 --- !u!1 &6669449143994979111
 GameObject:
   m_ObjectHideFlags: 0

@@ -341,7 +341,6 @@ public class SlotBehaviour : MonoBehaviour
         BalanceUpdate();
         if (Balance_text) Balance_text.text = SocketManager.playerdata.balance.ToString("F3");
         _bonusManager.ResetBonus();
-        Debug.Log($"##### Free Spins completed 338 ######");
         FreeSpinInitRoutine = StartCoroutine(_bonusManager.FreeSpinExitAnimRoutine($"<b>You Won</b>\n"));
         Debug.Log($"##### Free Spins completed 339 ######");
         yield return FreeSpinInitRoutine;
@@ -530,6 +529,7 @@ public class SlotBehaviour : MonoBehaviour
     //function to populate animation sprites accordingly
     internal void PopulateAnimationSprites(ImageAnimation animScript, int val)
     {
+        Debug.Log($"######pk :" + val);
         animScript.textureArray.Clear();
         animScript.textureArray.TrimExcess();
         switch (val)
@@ -570,24 +570,24 @@ public class SlotBehaviour : MonoBehaviour
             case 11:
                 //foreach (Sprite i in m_Seven_Sprites) { animScript.textureArray.Add(i); }
                 break;
-            case 12:
-                foreach (Sprite i in m_Mystery_Sprites) { animScript.textureArray.Add(i); }
-                break;
-            case 13:
-                foreach (Sprite i in m_MoonMystery_Sprites) { animScript.textureArray.Add(i); }
-                break;
-            case 14:
-                foreach (Sprite i in m_Mini_Sprites) { animScript.textureArray.Add(i); animScript.AnimationSpeed = 40f; }
-                break;
-            case 15:
-                foreach (Sprite i in m_Minor_Sprites) { animScript.textureArray.Add(i); animScript.AnimationSpeed = 40f; }
-                break;
-            case 16:
-                foreach (Sprite i in m_Major_Sprites) { animScript.textureArray.Add(i); animScript.AnimationSpeed = 40f; }
-                break;
-            case 17:
-                foreach (Sprite i in m_Moon_Sprites) { animScript.textureArray.Add(i); }
-                break;
+                // case 12:
+                //     foreach (Sprite i in m_Mystery_Sprites) { animScript.textureArray.Add(i); }
+                //     break;
+                // case 13:
+                //     foreach (Sprite i in m_MoonMystery_Sprites) { animScript.textureArray.Add(i); }
+                //     break;
+                // case 14:
+                //     foreach (Sprite i in m_Mini_Sprites) { animScript.textureArray.Add(i); animScript.AnimationSpeed = 40f; }
+                //     break;
+                // case 15:
+                //     foreach (Sprite i in m_Minor_Sprites) { animScript.textureArray.Add(i); animScript.AnimationSpeed = 40f; }
+                //     break;
+                // case 16:
+                //     foreach (Sprite i in m_Major_Sprites) { animScript.textureArray.Add(i); animScript.AnimationSpeed = 40f; }
+                //     break;
+                // case 17:
+                //     foreach (Sprite i in m_Moon_Sprites) { animScript.textureArray.Add(i); }
+                //     break;
         }
     }
 
@@ -714,6 +714,7 @@ public class SlotBehaviour : MonoBehaviour
         }
 
 
+
         //comment start
 
         if (!(SocketManager.fullResultData.features.freeSpin.useFreeSpin || IsFreeSpin))
@@ -751,6 +752,24 @@ public class SlotBehaviour : MonoBehaviour
         }
 
         PopulateResult();
+        if (IsFreeSpin || SocketManager.fullResultData.features.freeSpin.useFreeSpin)
+        {
+            for (int row = 0; row < SocketManager.fullResultData.bonusMatrix.Count; row++)
+            {
+                for (int col = 0; col < SocketManager.fullResultData.bonusMatrix[row].Count; col++)
+                {
+                    string valueStr = SocketManager.fullResultData.bonusMatrix[row][col];
+                    int value = int.Parse(valueStr);
+                    if (value == 14 || value == 15 || value == 16)
+                    {
+                        Debug.Log($" @@@@@@@ pk row , col and value respectively: " + row + " " + col + "   " + value);
+                        m_ShowTempImages[col].slotImages[row].transform.GetChild(2).localScale = new Vector3(2, 2, 2);
+                        ImageAnimation animScript = m_ShowTempImages[col].slotImages[row].transform.GetChild(2).GetComponent<ImageAnimation>();
+                        PopulateBonusAnimationSprites(animScript, value);
+                    }
+                }
+            }
+        }
         TweenSpinning = StartCoroutine(LevelOrderTraversal(IsStoppedSpin));
 
         yield return TweenSpinning;
@@ -780,6 +799,12 @@ public class SlotBehaviour : MonoBehaviour
         {
             SpinDelay = 0.2f;
         }
+        if (IsFreeSpin)
+        {
+            PlayFeatureAnimation();
+        }
+
+
 
         //HACK: Instruction Updated After Spin Ends If Wins then it shouldn't be updated other wise it will prompt 0th index
         // TotalWin_text.text = m_Instructions[0];
@@ -797,7 +822,6 @@ public class SlotBehaviour : MonoBehaviour
         //HACK: Kills The Tweens So That They Will Get Ready For Next Spin
         KillAllTweens();
 
-        CheckPopups = true;
 
         if (TotalWin_text) TotalWin_text.text = SocketManager.fullResultData.payload.currentWinning.ToString("F3");
 
@@ -819,7 +843,12 @@ public class SlotBehaviour : MonoBehaviour
         //else
         //{
         //}
-        CheckWinPopups();
+        if (!SocketManager.fullResultData.features.bonus.isGrandPrize && !SocketManager.fullResultData.features.bonus.isMoonJackpot)
+        {
+            CheckPopups = true;
+
+            CheckWinPopups();
+        }
 
         yield return new WaitUntil(() => !CheckPopups);
 
@@ -980,6 +1009,160 @@ public class SlotBehaviour : MonoBehaviour
         //comment end
 
     }
+    private void PlayFeatureAnimation()
+    {
+        for (int row = 0; row < SocketManager.fullResultData.bonusMatrix.Count; row++)
+        {
+            for (int col = 0; col < SocketManager.fullResultData.bonusMatrix[row].Count; col++)
+            {
+                string valueStr = SocketManager.fullResultData.bonusMatrix[row][col];
+                int parsedNumber = int.Parse(valueStr);
+
+                if (parsedNumber == 14)
+                {
+                    // imgAnim.textureArray = new List<Sprite>(m_Mini_Sprites);
+                    Debug.Log($" @@@@@@@ pk play animation  row , col and value respectively: " + row + " " + col + "   " + parsedNumber);
+                    m_ShowTempImages[col].slotImages[row].transform.GetChild(2).localScale = new Vector3(2, 2, 2);
+                    StartGameAnimation(m_ShowTempImages[col].slotImages[row].transform.GetChild(2).gameObject);
+
+                }
+                if (parsedNumber == 15)
+                {
+                    Debug.Log($" @@@@@@@ pk play animation  row , col and value respectively: " + row + " " + col + "   " + parsedNumber);
+                    m_ShowTempImages[col].slotImages[row].transform.GetChild(2).localScale = new Vector3(2, 2, 2);
+
+                    // imgAnim.textureArray = new List<Sprite>(m_Minor_Sprites);
+                    StartGameAnimation(m_ShowTempImages[col].slotImages[row].transform.GetChild(2).gameObject);
+
+                }
+                if (parsedNumber == 16)
+                {
+                    m_ShowTempImages[col].slotImages[row].transform.GetChild(2).localScale = new Vector3(2, 2, 2);
+
+                    // imgAnim.textureArray = new List<Sprite>(m_Major_Sprites);
+                    Debug.Log($" @@@@@@@ pk play animation  row , col and value respectively: " + row + " " + col + "   " + parsedNumber);
+
+                    StartGameAnimation(m_ShowTempImages[col].slotImages[row].transform.GetChild(2).gameObject);
+
+                }
+            }
+        }
+        // for (int i = 0; i < 4; i++)
+        // {
+        //     for (int j = 0; j < 4; j++)
+        //     {
+        //         ImageAnimation animScript = m_ShowTempImages[i].slotImages[j].transform.GetChild(2).GetComponent<ImageAnimation>();
+
+
+        //         if (int.TryParse(SocketManager.fullResultData.bonusMatrix[i][j], out int parsedNumber))
+        //         {
+        //             if (parsedNumber == 14)
+        //             {
+        //                 // imgAnim.textureArray = new List<Sprite>(m_Mini_Sprites);
+        //                 StartGameAnimation(m_ShowTempImages[i].slotImages[j].gameObject);
+        //             }
+        //             if (parsedNumber == 15)
+        //             {
+
+        //                 // imgAnim.textureArray = new List<Sprite>(m_Minor_Sprites);
+        //                 StartGameAnimation(m_ShowTempImages[i].slotImages[j].gameObject);
+        //             }
+        //             if (parsedNumber == 16)
+        //             {
+        //                 // imgAnim.textureArray = new List<Sprite>(m_Major_Sprites);
+
+        //                 StartGameAnimation(m_ShowTempImages[i].slotImages[j].gameObject);
+        //             }
+        //         }
+
+        //     }
+        // }
+    }
+    internal void PopulateBonusAnimationSprites(ImageAnimation animScript, int val)
+    {
+        animScript.textureArray.Clear();
+        animScript.textureArray.TrimExcess();
+        switch (val)
+        {
+            case 0:
+                for (int i = 0; i < m_Seven_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Seven_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Seven_Sprites.Length - 10;
+                break;
+            case 1:
+                for (int i = 0; i < m_Star_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Star_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Star_Sprites.Length - 10;
+                break;
+            case 2:
+                for (int i = 0; i < m_A_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_A_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_A_Sprites.Length - 10;
+                break;
+            case 3:
+                for (int i = 0; i < m_K_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_K_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_K_Sprites.Length - 10;
+                break;
+            case 4:
+                for (int i = 0; i < m_Q_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Q_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Q_Sprites.Length - 10;
+                break;
+            case 5:
+                for (int i = 0; i < m_J_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_J_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_J_Sprites.Length - 10;
+                break;
+            case 6:
+                for (int i = 0; i < m_Ten_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Ten_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Ten_Sprites.Length - 10;
+                break;
+            case 7:
+                for (int i = 0; i < m_Nine_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Nine_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Nine_Sprites.Length - 10;
+                break;
+            case 14:
+                for (int i = 0; i < m_Mini_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Mini_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Mini_Sprites.Length - 10;
+                break;
+            case 15:
+                for (int i = 0; i < m_Minor_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Minor_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Minor_Sprites.Length - 10;
+                break;
+            case 16:
+                for (int i = 0; i < m_Major_Sprites.Length; i++)
+                {
+                    animScript.textureArray.Add(m_Major_Sprites[i]);
+                }
+                animScript.AnimationSpeed = m_Major_Sprites.Length - 10;
+                break;
+        }
+    }
 
     private void PopulateResult()
     {
@@ -1015,10 +1198,20 @@ public class SlotBehaviour : MonoBehaviour
         }
     }
 
+
     internal int GetValueFromMatrix(int row, int col)
     {
         int value = 0;
         value = int.Parse(SocketManager.fullResultData.matrix[row][col]);
+        Debug.Log($"#####pk got row and column :" + row + " and " + " column " + value);
+        return value;
+    }
+
+    internal int GetValueFromBonusMatrix(int row, int col)
+    {
+        int value = 0;
+        value = int.Parse(SocketManager.fullResultData.bonusMatrix[row][col]);
+        Debug.Log($"#####pk got row and column :" + row + " and " + " column " + value);
         return value;
     }
 
@@ -1271,6 +1464,9 @@ public class SlotBehaviour : MonoBehaviour
         //{
         //    CheckPopups = false;
         //}
+        // if ((!SocketManager.fullResultData.features.bonus.isMoonJackpot && !SocketManager.fullResultData.features.bonus.isGrandPrize))
+        // {
+
         if (SocketManager.fullResultData.payload.currentWinning > 0)
         {
             // audioController.PlayWin(Sound.MegaWin);
@@ -1282,6 +1478,7 @@ public class SlotBehaviour : MonoBehaviour
         {
             CheckPopups = false;
         }
+        // }
     }
 
     internal void CheckBonusGame()
@@ -1327,7 +1524,7 @@ public class SlotBehaviour : MonoBehaviour
     private void StartGameAnimation(GameObject animObjects)
     {
         ImageAnimation temp = animObjects.GetComponent<ImageAnimation>();
-        if (temp.textureArray.Count > 0)
+        if (temp.textureArray.Count > 0 && temp.currentAnimationState != ImageAnimation.ImageState.PLAYING)
         {
             temp.StartAnimation();
             TempList.Add(temp);
@@ -1379,6 +1576,18 @@ public class SlotBehaviour : MonoBehaviour
 
     }
 
+    internal void ResetSlotsSymbolSize()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                m_ShowTempImages[i].slotImages[j].transform.GetChild(2).localScale = new Vector3(1, 1, 1);
+                m_ShowTempImages[i].slotImages[j].transform.GetChild(2).GetComponent<ImageAnimation>().StopAnimation();
+            }
+        }
+    }
+
     #region TweeningCode
     private void InitializeTweening(Transform slotTransform, bool isBonus)
     {
@@ -1425,7 +1634,7 @@ public class SlotBehaviour : MonoBehaviour
         }
         else
         {
-            bonusTweens[index] = slotTransform.DOLocalMoveY(-tweenpos + 100 + (SpaceFactor > 0 ? SpaceFactor / 4 : 0), 0.5f).SetEase(Ease.OutQuad);
+            bonusTweens[index] = slotTransform.DOLocalMoveY(-tweenpos + 100 + (SpaceFactor > 0 ? SpaceFactor / 4 : 0), 0.1f).SetEase(Ease.OutQuad);
         }
         // if (!isStop)
         // {

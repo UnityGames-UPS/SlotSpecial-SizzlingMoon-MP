@@ -266,7 +266,7 @@ public class BonusController : MonoBehaviour
 
     private IEnumerator NewMystery()
     {
-        
+
         // Wait until traversal is finished
         yield return new WaitUntil(() => m_SlotBehaviour.m_CheckEndTraversal);
         yield return new WaitForSeconds(2f);
@@ -303,7 +303,7 @@ public class BonusController : MonoBehaviour
             obj.transform.GetChild(1).gameObject.SetActive(false);
             obj.transform.GetChild(2).gameObject.SetActive(false);
         }
-   //audioController.PlaySpinAudio(true);
+        //audioController.PlaySpinAudio(true);
         yield return new WaitForSeconds(1f);
 
         // Assign mystery symbols
@@ -323,6 +323,15 @@ public class BonusController : MonoBehaviour
             m_SlotBehaviour.m_ShowTempImages[col].slotImages[row]
                 .transform.GetChild(2).GetComponent<Image>().sprite = m_SlotBehaviour.myImages[spriteIndex];
             Debug.Log($"Mystery Symbol Applied => Col:{col}, Row:{row}, SpriteIndex:{spriteIndex}, Prize:{datum.prizeValue}");
+            if (spriteIndex == 14 || spriteIndex == 15 || spriteIndex == 16)
+            {
+                //     m_SlotBehaviour.m_ShowTempImages[col].slotImages[row]
+                //    .transform.GetChild(2).localScale = new Vector3(2, 2, 2);
+
+                ImageAnimation animScript = m_SlotBehaviour.m_ShowTempImages[col].slotImages[row]
+       .transform.GetChild(2).GetComponent<ImageAnimation>();
+                m_SlotBehaviour.PopulateBonusAnimationSprites(animScript, spriteIndex);
+            }
 
         }
 
@@ -337,6 +346,25 @@ public class BonusController : MonoBehaviour
 
             obj.transform.GetChild(1).GetComponent<ImageAnimation>().StartAnimation();
             m_SlotBehaviour.InitializeShowTweening(obj.transform.GetChild(2));
+        }
+        for (int i = 0; i < data.Count; i++)
+        {
+            var datum = data[i];
+            int col = datum.position[1];
+            int row = datum.position[0];
+            int spriteIndex = 0;
+            if (!int.TryParse(datum.symbol, out spriteIndex))
+            {
+                Debug.LogWarning($"Mystery symbol '{datum.symbol}' is not numeric, defaulting to 0.");
+                spriteIndex = 0;
+            }
+            if (spriteIndex == 14 || spriteIndex == 15 || spriteIndex == 16)
+            {
+                m_SlotBehaviour.m_ShowTempImages[col].slotImages[row]
+               .transform.GetChild(2).localScale = new Vector3(2, 2, 2);
+                m_SlotBehaviour.m_ShowTempImages[col].slotImages[row]
+               .transform.GetChild(2).GetComponent<ImageAnimation>().StartAnimation();
+            }
         }
 
         // Show multiplier text only for certain symbols
@@ -364,7 +392,27 @@ public class BonusController : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
 
         // Stop tween and clean up
+
         yield return m_SlotBehaviour.StopBonusTween();
+        // for (int i = 0; i < data.Count; i++)
+        // {
+        //     var datum = data[i];
+        //     int col = datum.position[1];
+        //     int row = datum.position[0];
+        //     int spriteIndex = 0;
+        //     if (!int.TryParse(datum.symbol, out spriteIndex))
+        //     {
+        //         Debug.LogWarning($"Mystery symbol '{datum.symbol}' is not numeric, defaulting to 0.");
+        //         spriteIndex = 0;
+        //     }
+        //     if (spriteIndex == 14 || spriteIndex == 15 || spriteIndex == 16)
+        //     {
+        //         m_SlotBehaviour.m_ShowTempImages[col].slotImages[row]
+        //        .transform.GetChild(2).localScale = new Vector3(2, 2, 2);
+        //         m_SlotBehaviour.m_ShowTempImages[col].slotImages[row]
+        //        .transform.GetChild(2).GetComponent<ImageAnimation>().StartAnimation();
+        //     }
+        // }
 
         m_ListOfMystery.Clear();
         m_ListOfMystery.TrimExcess();
@@ -494,13 +542,13 @@ public class BonusController : MonoBehaviour
         if ((!m_SocketManager.fullResultData.features.bonus.isGrandPrize && !m_SocketManager.fullResultData.features.bonus.isMoonJackpot && m_SocketManager.fullResultData.features.bonus.isMoonMystery))
         {
             Debug.Log($"##### Free Spins completed 354 ######");
-            
+
             m_SocketManager.AccumulateResult(m_SlotBehaviour.BetCounter);
             Debug.Log($"##### Free Spins completed 355 ######");
             yield return new WaitUntil(() => m_SocketManager.isResultdone);
             yield return StartCoroutine(StartMoonMysteryAndMystery());
         }
-      //  audioController.PlaySpinAudio(false);
+        //  audioController.PlaySpinAudio(false);
 
         yield return new WaitForSeconds(1f);
 
@@ -514,6 +562,7 @@ public class BonusController : MonoBehaviour
 
         m_FreeSpinExitAnimation.transform.GetChild(0).gameObject.SetActive(false);
         FreeSpinExitAnimation(false);
+        m_SlotBehaviour.ResetSlotsSymbolSize();
     }
 
     internal void ResetBonus()

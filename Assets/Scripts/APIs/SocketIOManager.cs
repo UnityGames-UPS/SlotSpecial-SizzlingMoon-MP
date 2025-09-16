@@ -899,7 +899,7 @@ public class Symbol
 
   public int id { get; set; }
   public string name { get; set; }
-  public List<int> multiplier { get; set; }
+  public List<double> multiplier { get; set; }
   public string description { get; set; }
 
 
